@@ -120,8 +120,10 @@ class Petriskive:
     @property
     def mikrober(self):
         return self._mikrober
-
-
+    
+    @property
+    def mat(self):
+        return self._mat
             
             
             
