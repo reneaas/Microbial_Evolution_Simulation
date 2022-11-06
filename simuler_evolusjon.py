@@ -57,8 +57,8 @@ def create_images(x, y, n_celler):
 
 def create_animation(fname, n_celler, x, y):
     fig, ax, imgs = create_images(x=x, y=y, n_celler=n_celler)
-    ani = animation.ArtistAnimation(fig, imgs, interval=0, blit=True)
-    ani.save(fname, fps=120, writer="ffmpeg")
+    ani = animation.ArtistAnimation(fig, imgs, blit=True)
+    ani.save(fname, fps=60, writer="ffmpeg")
     plt.close()
 
 
