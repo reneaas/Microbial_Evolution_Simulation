@@ -65,7 +65,7 @@ def create_animation(fname, n_celler, x, y):
 def main(n_tidssteg, n_mikrober, dE, n_celler, time_delay):
     # petriskive.tidsevolusjon(n_tidssteg=10000)
     x, y, n_mat, n_mikrober, tidssteg = tidsevolusjon(n_tidssteg=n_tidssteg, n_mikrober=n_mikrober, dE=dE, n_celler=n_celler, matfordeling="garden_of_eden", time_delay=time_delay)
-    create_animation(fname="mikrober_evolusjon_perf.gif", n_celler=n_celler, x=x, y=y)
+    create_animation(fname="animations/garden_of_eden_sim_500x500.mp4", n_celler=n_celler, x=x, y=y)
     plt.plot(tidssteg, n_mikrober, label="antall mikrober", color="red") 
     plt.plot(tidssteg, n_mat, label="antall bakterier (mat)", color="blue")
     plt.legend()
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     # main(n_tidssteg=500, n_mikrober=2500, dE=40, n_celler=1000, time_delay=50)
     np.random.seed(101)
     main(
-        n_tidssteg=1000,
+        n_tidssteg=2500,
         n_mikrober=1,
         dE=40,
         n_celler=500,
